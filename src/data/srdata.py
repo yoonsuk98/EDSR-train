@@ -74,8 +74,8 @@ class SRData(data.Dataset):
             filename, _ = os.path.splitext(os.path.basename(f))
             for si, s in enumerate(self.scale):
                 names_lr[si].append(os.path.join(
-                    self.dir_lr, 'X{}/{}x{}{}'.format(
-                        s, filename, s, self.ext[1]
+                    self.dir_lr, 'X{}/{}{}'.format(
+                        s, filename, self.ext[1]
                     )
                 ))
 
@@ -86,7 +86,7 @@ class SRData(data.Dataset):
         self.dir_hr = os.path.join(self.apath, 'HR')
         self.dir_lr = os.path.join(self.apath, 'LR_bicubic')
         if self.input_large: self.dir_lr += 'L'
-        self.ext = ('.png', '.png')
+        self.ext = ('.jpg', '.jpg')
 
     def _check_and_load(self, ext, img, f, verbose=True):
         if not os.path.isfile(f) or ext.find('reset') >= 0:

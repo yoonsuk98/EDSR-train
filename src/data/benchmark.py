@@ -21,5 +21,5 @@ class Benchmark(srdata.SRData):
             self.dir_lr = os.path.join(self.apath, 'LR_bicubicL')
         else:
             self.dir_lr = os.path.join(self.apath, 'LR_bicubic')
-        self.ext = ('', '.png')
+        self.ext = ('', '.jpg')
 
