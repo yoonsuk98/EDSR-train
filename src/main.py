@@ -9,7 +9,6 @@ from trainer import Trainer
 
 torch.manual_seed(args.seed)
 checkpoint = utility.checkpoint(args)
-# 안녕하세요
 
 def main():
     global model
