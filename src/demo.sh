@@ -1,5 +1,10 @@
 # EDSR baseline model (x2) + JPEG augmentation
-python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
+#python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
+
+#python main.py --model EDSR --scale 4 --patch_size 96 --save edsr_baseline_x4 --data_train mscoco --data_test mscoco
+python main.py --model EDSR --scale 4 --patch_size 192 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --save edsr_baseline_x4 --data_train mscoco --data_test mscoco
+#python main.py --model EDSR --scale 4 --patch_size 192  --n_resblocks 32 --n_feats 256 --res_scale 0.1 --save edsr_baseline_x4_test --data_test mscoco --pre_train /home/user/multilabel/EDSR-PyTorch/experiment/edsr_baseline_x2/model/model_best.pt --test_only --save_results
+
 #python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset --data_train DIV2K+DIV2K-Q75 --data_test DIV2K+DIV2K-Q75
 
 # EDSR baseline model (x3) - from EDSR baseline model (x2)
