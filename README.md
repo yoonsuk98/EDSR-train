@@ -43,6 +43,15 @@ We provide scripts for reproducing all the results from our paper. You can train
 * tqdm
 * cv2 >= 3.xx (Only if you want to use video input/output)
 
+```
+# 설치
+pip install torch>=1.8.0 torchvision>=0.9.0 numpy scikit-image imageio matplotlib tqdm
+
+# 설치 잘 되었는지 확인
+pip list
+```
+
+
 ## Code
 Clone this repository into any place you want.
 ```bash
